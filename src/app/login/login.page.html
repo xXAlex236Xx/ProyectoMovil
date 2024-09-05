@@ -1,0 +1,29 @@
+<ion-content [fullscreen]="true">
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <h1 style="color: black;">Bienvenido!</h1>
+      <p>Inicia sesion para continuar</p>
+    </div>
+    <div class="login-form ion-padding">
+      <div class="form-input">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">EMAIL</ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">PASSWORD</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+      </div>
+    </div>
+    <div class="action-button ion-padding">
+      <ion-button size="large" class="login-button">Iniciar sesion</ion-button>
+      <p style="color: black;">Olvidaste tu contraseña?</p>
+      <ion-button class="signup-button" size="large" fill="outline" routerlink="/signup">Registrarse</ion-button>
+    </div>
+  </div>
+</ion-content>
