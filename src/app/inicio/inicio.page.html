@@ -1,0 +1,44 @@
+<ion-content>
+  <div class="container">
+    <h1>Bienvenido a TeLlevoAPP</h1>
+    <p>Conéctate con otros alumnos y organiza tus viajes de regreso a casa de manera eficiente.</p>
+    
+    <h2>¿Qué es TeLlevoAPP?</h2>
+    <p>TeLlevoAPP es una aplicación diseñada para ayudarte a organizar y programar tus viajes de regreso a casa junto con otros compañeros. Nuestro objetivo es:</p>
+    <ul>
+      <li>Reducir los tiempos destinados a encontrar transporte de retorno.</li>
+      <li>Fomentar el compañerismo entre alumnos.</li>
+      <li>Instar a los alumnos a asistir presencialmente a clases.</li>
+      <li>Reducir la huella de carbono mediante opciones colaborativas de transporte.</li>
+    </ul>
+    
+    <h2>Contacto</h2>
+    <p>Para soporte o sugerencias, por favor contáctanos:</p>
+    <ul>
+      <li>Email: soporte&#64;tellevoapp.com</li>
+      <li>Teléfono: +123 456 7890</li>
+      <li><a href="mailto:soporte&#64;tellevoapp.com">Enviar un correo</a></li>
+    </ul>
+  </div>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="home"></ion-icon>
+        Inicio
+      </ion-tab-button>
+      <ion-tab-button tab="trips">
+        <ion-icon name="car"></ion-icon>
+        Mis Viajes
+      </ion-tab-button>
+      <ion-tab-button tab="search">
+        <ion-icon name="search"></ion-icon>
+        Buscar Transporte
+      </ion-tab-button>
+      <ion-tab-button (click)="goToLogin()">
+        <ion-icon name="person"></ion-icon>
+        Perfil
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

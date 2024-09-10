@@ -9,21 +9,34 @@
         <ion-icon name="mail-outline"></ion-icon>
         <ion-item>
           <ion-label position="floating">EMAIL</ion-label>
-          <ion-input type="email"></ion-input>
+          <ion-input
+            type="email"
+
+            labelPlacement="floating"
+            helperText="Enter a valid email"
+            errorText="Invalid email"
+            ngModel
+            email
+          ></ion-input>
         </ion-item>
       </div>
       <div class="form-input">
         <ion-icon name="lock-closed-outline"></ion-icon>
         <ion-item>
           <ion-label position="floating">PASSWORD</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-input type="password" value="Contraseña123">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
         </ion-item>
       </div>
     </div>
     <div class="action-button ion-padding">
-      <ion-button size="large" class="login-button">Iniciar sesion</ion-button>
-      <p style="color: black;">Olvidaste tu contraseña?</p>
-      <ion-button class="signup-button" size="large" fill="outline" routerlink="/signup">Registrarse</ion-button>
+      <ion-button id="iniciar sesion" size="large" class="login">Iniciar sesion</ion-button>
+      <ion-loading class="custom-loading" trigger="iniciar sesion" message="Loading..." [duration]="3000" spinner="circles"></ion-loading>
+      <ion-router-link routerLink="/restablecer-contraseña">
+        <p style="color: rgb(136, 115, 231);">Olvidaste tu contraseña?</p>
+      </ion-router-link>
+      <ion-button class="signup" size="large" routerLink="/signup">Registrarse</ion-button>
     </div>
   </div>
 </ion-content>

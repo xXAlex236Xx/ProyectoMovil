@@ -1,50 +1,51 @@
-ion-content{
+ion-content {
     --background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
     url("/assets/1011923.png") no-repeat center center / cover;
 }
 
-.login-section{
+.login-section {
     height: 74vh;
     width: 100%;
     max-width: 500px;
     opacity: 0.89;
-    background-color:rgb(249, 254, 255);
-    right: 0;
-    left: 0;
-    bottom: 0;
+    background-color: rgb(249, 254, 255);
     position: fixed;
     margin: auto;
     border-top-left-radius: 46px;
     border-top-right-radius: 46px;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-    .heading{
+    .heading {
         margin-top: 20px;
-        h1{
+        h1 {
             font-size: 1.6rem;
             font-weight: bolder;
         }
-        p{
+        p {
             margin-top: 20px;
             font-size: 1rem;
             color: #7b7b7b;
         }
     }
-    .login-form{
-        .form-input{
+
+    .login-form {
+        .form-input {
             position: relative;
             margin-bottom: 10px;
             ion-item::part(native) {
                 padding-left: 0;
             }
 
-            ion-icon{
+            ion-icon {
                 position: absolute;
                 top: 19px;
                 z-index: 2;
                 font-size: 1.2rem;
                 left: 5px;
             }
-            ion-label{
+            ion-label {
                 position: absolute;
                 margin-left: 35px;
                 font-weight: bolder;
@@ -53,7 +54,7 @@ ion-content{
                 text-size-adjust: 0.5;
             }
 
-            ion-input{
+            ion-input {
                 font-size: 0.9rem;
                 --padding-start: 36px;
                 --padding-top: 36px;
@@ -61,32 +62,34 @@ ion-content{
             }
         }
     }
-    .action-buttons{
+
+    .action-buttons {
         text-align: center;
-        .login-button{
+
+        .login-button {
             --background: #f9b801;
             width: 100%;
             font-weight: bold;
         }
+
         ion-loading.custom-loading {
             --background: #e3edff;
             --spinner-color: #1c6dff;
-          
             color: #1c6dff;
-          }
-        p{
+        }
+
+        p {
             margin-top: 15px;
             font-size: 1rem;
             color: #7b7b7b;
         }
-        .signup{
-            --boder-color: #b4b4b4;
-            -color: #000000;
+
+        .signup {
+            --border-color: #b4b4b4;
+            --color: #000000;
             font-weight: bold;
             margin-top: 30px;
             width: 100%;
         }
-        
-
     }
 }

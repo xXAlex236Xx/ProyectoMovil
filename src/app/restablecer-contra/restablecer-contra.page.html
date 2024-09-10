@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Restablecer Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <h1 style="color: black;">Restablece tu Contraseña</h1>
+      <p>Introduce tu correo electrónico para recibir instrucciones.</p>
+    </div>
+    <div class="login-form ion-padding">
+      <div class="form-input">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">EMAIL</ion-label>
+          <ion-input
+            type="email"
+            labelPlacement="floating"
+            helperText="Introduce un correo electrónico válido"
+            errorText="Correo electrónico inválido"
+            ngModel
+            email
+          ></ion-input>
+        </ion-item>
+      </div>
+    </div>
+    <div class="action-buttons ion-padding">
+      <ion-button id="enviar-instrucciones" size="large" class="login-button">Enviar Instrucciones</ion-button>
+      <ion-loading class="custom-loading" trigger="enviar-instrucciones" message="Enviando..." [duration]="3000" spinner="circles"></ion-loading>
+      <ion-router-link routerLink="/login">
+        <p style="color: rgb(136, 115, 231);">Volver al inicio de sesión</p>
+      </ion-router-link>
+      <ion-button class="signup" size="large" routerLink="/signup">Registrarse</ion-button>
+    </div>
+  </div>
+</ion-content>
+

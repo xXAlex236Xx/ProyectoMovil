@@ -4,22 +4,30 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'inicio', // Redirige la ruta raíz a la página de inicio
     pathMatch: 'full'
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule) // Carga el módulo de la página de inicio de sesión
   },
   {
     path: 'signup',
-    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+    loadChildren: () => import('./signup/signup.module').then(m => m.SignupPageModule) // Carga el módulo de la página de registro
   },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio.module').then(m => m.InicioPageModule) // Carga el módulo de la página de inicio
+  },
+  {
+    path: 'restablecer-contraseña',
+    loadChildren: () => import('./restablecer-contra/restablecer-contra.module').then(m => m.RestablecerContraPageModule) // Carga el módulo de la página de restablecimiento de contraseña
+  }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }) // Configura el enrutamiento con precarga de todos los módulos
   ],
   exports: [RouterModule]
 })

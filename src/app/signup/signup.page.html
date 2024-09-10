@@ -2,7 +2,7 @@
   <div class="login-section ion-padding">
     <div class="heading ion-padding">
       <h1 style="color: black;">Crea una cuenta!</h1>
-      <p>Empieza tu carreca con nosotros</p>
+      <p>Empieza tu carrera con nosotros</p>
     </div>
     <div class="login-form ion-padding">
       <div class="form-input">
@@ -13,6 +13,13 @@
         </ion-item>
       </div>
       <div class="form-input">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">EMAIL</ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+      </div>
+      <div class="form-input">
         <ion-icon name="lock-closed-outline"></ion-icon>
         <ion-item>
           <ion-label position="floating">PASSWORD</ion-label>
@@ -20,9 +27,11 @@
         </ion-item>
       </div>
     </div>
-    <div class="action-button ion-padding">
-      <ion-button size="large" class="login-button">Crear Cuenta</ion-button>
-      <ion-button class="signup-button" size="large" fill="outline" routerlink="/signup">Iniciar Sesion</ion-button>
+    <div class="action-buttons ion-padding">
+      <ion-button size="large" class="login-button">Registrarse</ion-button>
+      <ion-router-link routerLink="/login" class="back-to-login">
+        <p>Volver al inicio de sesión</p>
+      </ion-router-link>
     </div>
   </div>
 </ion-content>
