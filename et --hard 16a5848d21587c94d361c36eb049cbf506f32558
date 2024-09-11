@@ -1,0 +1,112 @@
+[33mcommit 16a5848d21587c94d361c36eb049cbf506f32558[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: xXAlex236Xx <eljugador1066@gmail.com>
+Date:   Tue Sep 10 20:46:07 2024 -0300
+
+    Corregimiento tab parte abajo pantalla
+
+[1mdiff --git a/src/app/inicio/inicio.page.html b/src/app/inicio/inicio.page.html[m
+[1mindex 94ba3b6..d3360d1 100644[m
+[1m--- a/src/app/inicio/inicio.page.html[m
+[1m+++ b/src/app/inicio/inicio.page.html[m
+[36m@@ -20,25 +20,28 @@[m
+       <li><a href="mailto:soporte&#64;tellevoapp.com">Enviar un correo</a></li>[m
+     </ul>[m
+   </div>[m
+[31m-[m
+[31m-  <ion-tabs>[m
+[31m-    <ion-tab-bar slot="bottom">[m
+[31m-      <ion-tab-button tab="home">[m
+[31m-        <ion-icon name="home"></ion-icon>[m
+[31m-        Inicio[m
+[31m-      </ion-tab-button>[m
+[31m-      <ion-tab-button tab="trips">[m
+[31m-        <ion-icon name="car"></ion-icon>[m
+[31m-        Mis Viajes[m
+[31m-      </ion-tab-button>[m
+[31m-      <ion-tab-button tab="search">[m
+[31m-        <ion-icon name="search"></ion-icon>[m
+[31m-        Buscar Transporte[m
+[31m-      </ion-tab-button>[m
+[31m-      <ion-tab-button (click)="goToLogin()">[m
+[31m-        <ion-icon name="person"></ion-icon>[m
+[31m-        Perfil[m
+[31m-      </ion-tab-button>[m
+[31m-    </ion-tab-bar>[m
+[31m-  </ion-tabs>[m
+ </ion-content>[m
+[32m+[m[32m<ion-footer>[m
+[32m+[m[32m  <ion-toolbar>[m
+[32m+[m[32m    <ion-tabs>[m
+[32m+[m[32m      <ion-tab-bar slot="bottom">[m
+[32m+[m[32m        <ion-tab-button tab="home">[m
+[32m+[m[32m          <ion-icon name="home"></ion-icon>[m
+[32m+[m[32m          <ion-label>Inicio</ion-label>[m
+[32m+[m[32m        </ion-tab-button>[m
+[32m+[m[32m        <ion-tab-button tab="trips">[m
+[32m+[m[32m          <ion-icon name="car"></ion-icon>[m
+[32m+[m[32m          <ion-label>Mis Viajes</ion-label>[m
+[32m+[m[32m        </ion-tab-button>[m
+[32m+[m[32m        <ion-tab-button tab="search">[m
+[32m+[m[32m          <ion-icon name="search"></ion-icon>[m
+[32m+[m[32m          <ion-label>Buscar Transporte</ion-label>[m
+[32m+[m[32m        </ion-tab-button>[m
+[32m+[m[32m        <ion-tab-button (click)="goToLogin()">[m
+[32m+[m[32m          <ion-icon name="person"></ion-icon>[m
+[32m+[m[32m          <ion-label>Perfil</ion-label>[m
+[32m+[m[32m        </ion-tab-button>[m
+[32m+[m[32m      </ion-tab-bar>[m
+[32m+[m[32m    </ion-tabs>[m
+[32m+[m[32m  </ion-toolbar>[m
+[32m+[m[32m</ion-footer>[m
+\ No newline at end of file[m
+[1mdiff --git a/src/app/inicio/inicio.page.scss b/src/app/inicio/inicio.page.scss[m
+[1mindex d20baca..04eb626 100644[m
+[1m--- a/src/app/inicio/inicio.page.scss[m
+[1m+++ b/src/app/inicio/inicio.page.scss[m
+[36m@@ -7,27 +7,26 @@[m
+ .container {[m
+   text-align: center;[m
+   padding: 20px;[m
+[31m-  background-color: #ffffff;[m
+   border-radius: 10px;[m
+[31m-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);[m
+[32m+[m[32m  box-shadow: 0 4px 12px rgba(85, 85, 85, 0.1);[m
+   margin-bottom: 60px; /* Espacio para el ion-tabs */[m
+ }[m
+ [m
+ h1 {[m
+[31m-  color: #333333;[m
+[32m+[m[32m  color: #ffffff;[m
+   font-size: 28px;[m
+   margin-bottom: 15px;[m
+ }[m
+ [m
+ h2 {[m
+[31m-  color: #444444;[m
+[32m+[m[32m  color: #ffffff;[m
+   font-size: 22px;[m
+   margin-top: 20px;[m
+   margin-bottom: 10px;[m
+ }[m
+ [m
+ p {[m
+[31m-  color: #666666;[m
+[32m+[m[32m  color: #ffffff;[m
+   font-size: 16px;[m
+   line-height: 1.5;[m
+ }[m
+[36m@@ -67,3 +66,13 @@[m [mion-tab-button {[m
+ ion-icon {[m
+   font-size: 22px;[m
+ }[m
+[32m+[m
+[32m+[m[32mion-footer {[m
+[32m+[m[32m  height: auto;[m
+[32m+[m[32m  min-height: 60px; /* Ajusta el tamaño según sea necesario */[m
+[32m+[m[32m  position: fixed;[m
+[32m+[m[32m  bottom: 0;[m
+[32m+[m[32m  margin-left: auto;[m
+[32m+[m[32m  margin-right: auto;[m
+[32m+[m[32m  width: 92%;[m
+[32m+[m[32m}[m
+\ No newline at end of file[m

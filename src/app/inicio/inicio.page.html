@@ -1,26 +1,95 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="apps"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+    <ion-item lines="none">
+
+      <ion-avatar slot="start">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png">
+      </ion-avatar>
+      <ion-label>
+        <p>Hello!</p>
+      </ion-label>
+
+    </ion-item>
+
+</ion-header>
+
 <ion-content>
+  <div class="slides ion-margin-bottom">
+    <ion-slides [options]="slidesOptions">
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+          </ion-card-header>
+          <ion-card-content class="ion-text-left">
+            <ion-card-title class="ion-margin-bottom" style="color: black;">Bienvenido a TeLlevoAPP</ion-card-title>
+            <ion-card-subtitle>La aplicación diseñada para facilitar el transporte de retorno a casa para los estudiantes de DuocUC.</ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <div class="files">
+              <img src="https://media.gq.com.mx/photos/604458fef0cc2a1d8969755c/master/pass/10%20autos%20que%20quieren%20ser%20el%20mejor%20de%202021%20-%20BMW%204-Series%202021%20(1).jpg">
+            </div>
+          </ion-card-header>
+          <ion-card-content class="ion-text-left">
+            <ion-card-title class="ion-margin-bottom" style="color: black;">Vehículo 1</ion-card-title>
+            <ion-card-subtitle>Toyota Corolla 2022 azul, con aire acondicionado y asientos de cuero, número de placa ABC-1234. Conducido por Laura García, 32 años, con 5 años de experiencia y calificación de 4.9/5, conocida por su profesionalismo y amabilidad.</ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <div class="files">
+              <img src="https://www.autoplusdigital.com.ar/wp-content/uploads/2023/04/autos-2.jpg">
+            </div>
+          </ion-card-header>
+          <ion-card-content class="ion-text-left">
+            <ion-card-title class="ion-margin-bottom" style="color: black;">Vehículo 2</ion-card-title>
+            <ion-card-subtitle>Honda Civic 2021 rojo, con sistema de navegación y asientos cómodos, número de placa XYZ-5678. Conducido por Javier López, 40 años, con 7 años de experiencia y calificación de 4.8/5, reconocido por su puntualidad y cortesía.</ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+  </ion-slides>
+  </div>
   <div class="container">
-    <h1>Bienvenido a TeLlevoAPP</h1>
-    <p>Conéctate con otros alumnos y organiza tus viajes de regreso a casa de manera eficiente.</p>
-    
-    <h2>¿Qué es TeLlevoAPP?</h2>
-    <p>TeLlevoAPP es una aplicación diseñada para ayudarte a organizar y programar tus viajes de regreso a casa junto con otros compañeros. Nuestro objetivo es:</p>
-    <ul>
-      <li>Reducir los tiempos destinados a encontrar transporte de retorno.</li>
-      <li>Fomentar el compañerismo entre alumnos.</li>
-      <li>Instar a los alumnos a asistir presencialmente a clases.</li>
-      <li>Reducir la huella de carbono mediante opciones colaborativas de transporte.</li>
-    </ul>
-    
-    <h2>Contacto</h2>
-    <p>Para soporte o sugerencias, por favor contáctanos:</p>
-    <ul>
-      <li>Email: soporte&#64;tellevoapp.com</li>
-      <li>Teléfono: +123 456 7890</li>
-      <li><a href="mailto:soporte&#64;tellevoapp.com">Enviar un correo</a></li>
-    </ul>
+
+    <div class="info">
+      <h2>Contacto para Asistencia y Soporte</h2>
+      <p>institución: DuocUC, Vicerrectoría Académica, ET3</p>
+      <p>Correo Electrónico de Soporte:¿</p>
+      <p>Teléfono de Contacto: +56 2 1234 5678</p>
+      <p>Horario de Atención: Lunes a Viernes, 9:00 AM - 6:00 PM</p>
+    </div>
+
+    <div class="info">
+      <h2>Enlace de Descarga de APK</h2>
+      <p><a href="http://localhost:8000/download" class="button">Descargar TeLlevoAPP</a></p>
+      <p>Para acceder a través de dispositivos móviles, haz clic en el botón arriba.</p>
+      <p>Para acceder desde un dispositivo de escritorio, escanea el siguiente código QR:</p>
+    </div>
+
+    <div class="info">
+      <p><strong>Dirección de la Oficina:</strong> Av. Vicuña Mackenna 4860, Santiago, Chile</p>
+      <p><strong>Redes Sociales:</strong></p>
+      <p>
+        <a href="https://facebook.com/duocuc" class="button">Facebook</a>
+        <a href="https://twitter.com/duocuc" class="button">Twitter</a>
+        <a href="https://instagram.com/duocuc" class="button">Instagram</a>
+      </p>
+    </div>
   </div>
 </ion-content>
+
 <ion-footer>
   <ion-toolbar>
     <ion-tabs>

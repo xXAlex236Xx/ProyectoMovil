@@ -1,0 +1,30 @@
+[33mcommit 16a5848d21587c94d361c36eb049cbf506f32558[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: xXAlex236Xx <eljugador1066@gmail.com>
+Date:   Tue Sep 10 20:46:07 2024 -0300
+
+    Corregimiento tab parte abajo pantalla
+
+[33mcommit 3fbe59a49fb724baa7c5128ee62eeeb6c166a5d7[m
+Author: xXAlex236Xx <eljugador1066@gmail.com>
+Date:   Mon Sep 9 23:43:54 2024 -0300
+
+    Añadimiento home y Añadimiento Cambiar Paginas
+
+[33mcommit 61b115c03a79a8bb8c0828faf6e811d1fe6613a8[m
+Merge: 0c9fc8b 674dd46
+Author: xXAlex236Xx <eljugador1066@gmail.com>
+Date:   Wed Sep 4 22:11:58 2024 -0400
+
+    Merge branch 'main' of https://github.com/xXAlex236Xx/ProyectoMovil
+
+[33mcommit 0c9fc8b0ffca3b9716c9f96733fcc52690f75d59[m
+Author: xXAlex236Xx <eljugador1066@gmail.com>
+Date:   Wed Sep 4 22:04:43 2024 -0400
+
+    Añadimiento Proyecto
+
+[33mcommit 674dd46b2fd1e95472ea19a726dd4d9780c2b3cb[m
+Author: xXAlex236Xx <135857842+xXAlex236Xx@users.noreply.github.com>
+Date:   Tue Sep 3 22:22:32 2024 -0400
+
+    Initial commit

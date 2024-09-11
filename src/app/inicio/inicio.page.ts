@@ -12,4 +12,13 @@ export class InicioPage {
   goToLogin() {
     this.router.navigate(['/login']);
   }
+
+  slidesOptions = {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: { clickable: true },
+    navigation: true,
+    scrollbar: { draggable: true }
+  };
+  
 }
