@@ -122,3 +122,75 @@ body {
 .button:hover {
   background-color: #3171e0;
 }
+/* Contenedor de la caja de búsqueda */
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 50px; /* Ancho inicial pequeño */
+  height: 50px;
+  transition: width 0.4s ease;
+  margin: 0 auto; /* Centra el contenedor en la pantalla */
+  border-radius: 25px; /* Bordes redondeados */
+  overflow: hidden; /* Ocultar contenido que se extiende fuera del contenedor */
+}
+
+/* Caja expandida */
+.search-wrapper.expanded {
+  width: calc(100% - 20px); /* Ancho adaptado a la pantalla con un margen */
+  max-width: 360px; /* Ancho máximo para pantallas pequeñas */
+}
+
+/* Contenedor del botón de búsqueda */
+.search-button-holder {
+  position: absolute;
+  z-index: 1;
+  transition: opacity 0.4s ease;
+}
+
+/* Ocultar el botón cuando la caja está expandida */
+.search-wrapper.expanded .search-button-holder {
+  opacity: 0;
+  pointer-events: none; /* Desactivar eventos del ratón para que el botón no sea clicable */
+}
+
+/* Contenedor del input de búsqueda */
+.input-holder {
+  display: none;
+  width: 100%;
+  position: relative;
+}
+
+/* Mostrar el input solo cuando está expandido */
+.search-wrapper.expanded .input-holder {
+  display: flex;
+}
+
+/* Estilo del input de búsqueda */
+.search-input {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo del botón de búsqueda */
+.search-icon {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  font-size: 24px;
+  border-radius: 25px;
+  --border-width: 0;
+}
+
+input:focus {
+  outline: none;
+}

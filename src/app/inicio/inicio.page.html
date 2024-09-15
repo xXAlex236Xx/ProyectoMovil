@@ -21,6 +21,23 @@
 </ion-header>
 
 <ion-content>
+  <div class="search-wrapper">
+    <div class="search-button-holder">
+      <ion-button (click)="searchToggle($event)" class="search-icon">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+    </div>
+    <div class="input-holder">
+      <ion-input
+        type="text"
+        placeholder="Type to search"
+        [(ngModel)]="searchTerm"
+        class="search-input"
+        (input)="onSearchInput()"
+        (blur)="onInputBlur()"
+      ></ion-input>
+    </div>
+  </div>
   <div class="slides ion-margin-bottom">
     <ion-slides [options]="slidesOptions">
       <ion-slide>
