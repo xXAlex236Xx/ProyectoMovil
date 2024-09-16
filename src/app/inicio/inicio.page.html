@@ -1,19 +1,11 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button>
-        <ion-icon name="apps"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-
-  </ion-toolbar>
     <ion-item lines="none">
 
       <ion-avatar slot="start">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png">
       </ion-avatar>
       <ion-label>
-        <p>Hello!</p>
+        <p>Hello (User Name)!</p>
       </ion-label>
 
     </ion-item>
@@ -28,7 +20,7 @@
       </ion-button>
     </div>
     <div class="input-holder">
-      <ion-input
+      <ion-input style="color: black;"
         type="text"
         placeholder="Type to search"
         [(ngModel)]="searchTerm"
@@ -38,7 +30,7 @@
       ></ion-input>
     </div>
   </div>
-  <div class="slides ion-margin-bottom">
+  <div>
     <ion-slides [options]="slidesOptions">
       <ion-slide>
         <ion-card>
@@ -78,7 +70,7 @@
       </ion-slide>
   </ion-slides>
   </div>
-  <div class="container">
+  <div class="slides ion-margin-bottom">
 
     <div class="info">
       <h2>Contacto para Asistencia y Soporte</h2>

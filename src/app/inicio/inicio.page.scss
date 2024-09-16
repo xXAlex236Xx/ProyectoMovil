@@ -1,3 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4; /* Fondo claro para el contenido */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 ion-header {
   ion-toolbar, ion-item {
     --background: #f1f5f8;
@@ -33,9 +46,11 @@ ion-content {
   --background: linear-gradient(90deg, rgba(43,90,148,1) 0%, rgba(45,112,229,1) 35%, rgba(45,112,229,1) 100%);
 
   .slides {
-    background: #7a7a7a;
-    padding: 4px 10px 20px 10px;
-    border-radius: 0 0 28px 28px;
+    background: #fff; /* Fondo blanco para resaltar el contenido */
+    padding: 20px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    margin-bottom: 20px;
   }
 
   ion-card {
@@ -97,77 +112,91 @@ ion-content {
     }
   }
 }
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 20px;
-}
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-}
+
 .info {
   margin-bottom: 20px;
 }
+
+.info h2 {
+  font-size: 20px;
+  color: #333; /* Color de texto oscuro para el título */
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.info p {
+  font-size: 16px;
+  color: #555; /* Color de texto más claro */
+  margin: 5px 0;
+}
+
 .button {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
   background-color: #3880ff;
-  border-radius: 5px;
+  border-radius: 25px; /* Bordes redondeados para los botones */
   text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .button:hover {
   background-color: #3171e0;
+  transform: scale(1.05); /* Escala el botón un poco al pasar el cursor */
 }
-/* Contenedor de la caja de búsqueda */
+
+.info p:last-of-type {
+  margin-top: 10px;
+}
+
+.info img {
+  width: 150px; /* Ajusta el tamaño del código QR */
+  height: auto;
+  border-radius: 10px; /* Bordes redondeados para la imagen del QR */
+}
+
+/* Estilo para la caja de búsqueda */
 .search-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 50px; /* Ancho inicial pequeño */
+  width: 50px;
   height: 50px;
   transition: width 0.4s ease;
-  margin: 0 auto; /* Centra el contenedor en la pantalla */
-  border-radius: 25px; /* Bordes redondeados */
-  overflow: hidden; /* Ocultar contenido que se extiende fuera del contenedor */
+  margin: 0 auto;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #dbdfe2;
 }
 
-/* Caja expandida */
 .search-wrapper.expanded {
-  width: calc(100% - 20px); /* Ancho adaptado a la pantalla con un margen */
-  max-width: 360px; /* Ancho máximo para pantallas pequeñas */
+  width: calc(100% - 20px);
+  max-width: 360px;
 }
 
-/* Contenedor del botón de búsqueda */
 .search-button-holder {
   position: absolute;
   z-index: 1;
   transition: opacity 0.4s ease;
 }
 
-/* Ocultar el botón cuando la caja está expandida */
 .search-wrapper.expanded .search-button-holder {
   opacity: 0;
-  pointer-events: none; /* Desactivar eventos del ratón para que el botón no sea clicable */
+  pointer-events: none;
 }
 
-/* Contenedor del input de búsqueda */
 .input-holder {
   display: none;
   width: 100%;
   position: relative;
 }
 
-/* Mostrar el input solo cuando está expandido */
 .search-wrapper.expanded .input-holder {
   display: flex;
 }
 
-/* Estilo del input de búsqueda */
 .search-input {
   width: 100%;
   border: none;
@@ -181,7 +210,6 @@ body {
   justify-content: center;
 }
 
-/* Estilo del botón de búsqueda */
 .search-icon {
   cursor: pointer;
   position: relative;
