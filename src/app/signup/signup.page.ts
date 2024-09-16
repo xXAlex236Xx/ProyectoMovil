@@ -9,9 +9,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterPage {
   registerForm: FormGroup;
-  passwordStrength: number = 0; // 0 to 1 for progress bar
+  passwordStrength: number = 0; // barra progreso
   passwordStrengthText: string = '';
-  passwordStrengthColor: string = 'danger'; // default color
+  passwordStrengthColor: string = 'danger'; // su color
 
   constructor(private router: Router, private fb: FormBuilder) {
     this.registerForm = this.fb.group({
@@ -25,7 +25,7 @@ export class RegisterPage {
     if (this.registerForm.valid) {
       // Call your registration logic here
       console.log('Registration successful');
-      this.router.navigate(['/home']); // Navigate to home page or login page
+      this.router.navigate(['/home']); //navega a home
     } else {
       console.log('Form is invalid');
     }
@@ -35,27 +35,27 @@ export class RegisterPage {
     const password = this.registerForm.get('password')?.value;
     let strength = 0;
 
-    // Check for length
+    // revisa su longitud
     if (password.length >= 8) {
       strength++;
     }
 
-    // Check for special character or number
+    // revisa si tiene un caracter especial
     if (/[A-Za-z]/.test(password) && /[0-9]/.test(password) || /[\W_]/.test(password)) {
       strength++;
     }
 
-    // Determine strength level
+    // Determina la fuerza de la contraseña
     if (strength === 2) {
-      this.passwordStrength = 1; // 100% for strong
+      this.passwordStrength = 1; // 100% fuerte
       this.passwordStrengthText = 'Fuerte';
       this.passwordStrengthColor = 'success';
     } else if (strength === 1) {
-      this.passwordStrength = 0.5; // 50% for medium
+      this.passwordStrength = 0.5; // 50% medio
       this.passwordStrengthText = 'Medio';
       this.passwordStrengthColor = 'warning';
     } else {
-      this.passwordStrength = 0; // 0% for weak
+      this.passwordStrength = 0; // 0% debil
       this.passwordStrengthText = 'Débil';
       this.passwordStrengthColor = 'danger';
     }
