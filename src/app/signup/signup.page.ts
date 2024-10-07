@@ -23,7 +23,6 @@ export class RegisterPage {
 
   register() {
     if (this.registerForm.valid) {
-      // Call your registration logic here
       console.log('Registration successful');
       this.router.navigate(['/home']); //navega a home
     } else {
