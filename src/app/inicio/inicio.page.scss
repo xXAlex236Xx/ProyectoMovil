@@ -1,27 +1,31 @@
+/* Estilos generales del cuerpo */
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
   padding: 20px;
-  background-color: #f4f4f4; /* Fondo claro para el contenido */
+  background-color: #e6f2ff; /* Fondo azul claro */
 }
 
+/* Contenedor principal */
 .container {
   max-width: 800px;
   margin: 0 auto;
 }
 
+/* Estilos para el encabezado */
 ion-header {
-  ion-toolbar, ion-item {
-    --background: #f1f5f8;
-    background: #f1f5f8;
+  ion-toolbar,
+  ion-item {
+    --background: #b3c7e6; /* Fondo azul suave */
+    background: #b3c7e6; 
     padding: 0 10px;
   }
 
   ion-toolbar {
     .bordered {
       --border-radius: 10px;
-      --box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #FFFFFF;
+      --box-shadow: 5px 5px 10px #b0b0b0, -5px -5px 10px #FFFFFF;
     }
   }
 
@@ -29,11 +33,13 @@ ion-header {
     h3 {
       font-weight: 700;
       font-size: 14px;
+      color: #2c3e50; /* Azul oscuro */
     }
 
     p {
       font-weight: 500;
       font-size: 14px;
+      color: #34495e; /* Gris oscuro */
     }
 
     ion-avatar {
@@ -42,56 +48,35 @@ ion-header {
   }
 }
 
+/* Estilos para el contenido */
 ion-content {
-  --background: linear-gradient(90deg, rgba(43,90,148,1) 0%, rgba(45,112,229,1) 35%, rgba(45,112,229,1) 100%);
+  --background: linear-gradient(90deg, #4a90e2 0%, #357abd 35%, #4a90e2 100%); /* Degradado azul */
 
+  /* Estilo para los slides */
   .slides {
-    background: #fff; /* Fondo blanco para resaltar el contenido */
+    background: #fff;
     padding: 20px;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
   }
 
   ion-card {
-    width: 100%;
     box-shadow: none;
-    border-radius: 14px;
     padding: 14px;
-    background: rgba(255,255,255,.8);
-
-    .main {
-      width: 60px;
-      height: 60px;
-      border-radius: 50px;
-      background: #FFFFFF;
-      box-shadow: 7px 7px 20px #dbdfe2, -7px -7px 20px #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .files {
-      padding-top: 14px;
-      width: 300px;
-    }
+    background: rgba(255, 255, 255, .8);
   }
 
   .container {
     padding: 6px 20px;
-    color: #FFFFFF;
+    color: #2c3e50; /* Azul oscuro */
 
     ion-item {
-      --background: rgba(255,255,255,.1);
+      --background: rgba(255, 255, 255, .1);
       padding: 0;
       margin: 14px 0;
       --border-radius: 14px;
-      color: #FFFFFF;
+      color: #34495e; /* Gris oscuro */
       font-weight: 600;
 
       ion-label {
@@ -102,61 +87,72 @@ ion-content {
           font-size: 16px;
         }
         h6 {
-          color: rgba(255,255,255,.66);
+          color: rgba(0, 0, 0, .66);
         }
       }
     }
 
     h2 {
       padding-bottom: 8px;
+      color: #2c3e50; /* Azul oscuro */
     }
   }
 }
 
+/* Estilos para la sección de información */
 .info {
   margin-bottom: 20px;
 }
 
 .info h2 {
   font-size: 20px;
-  color: #333; /* Color de texto oscuro para el título */
+  color: #2c3e50; /* Azul oscuro */
   margin-bottom: 10px;
   font-weight: 600;
 }
 
 .info p {
   font-size: 16px;
-  color: #555; /* Color de texto más claro */
+  color: #555; /* Gris */
   margin: 5px 0;
 }
 
+/* Estilos para los botones */
 .button {
   display: inline-block;
-  padding: 10px 20px;
   font-size: 16px;
-  color: #fff;
-  background-color: #3880ff;
-  border-radius: 25px; /* Bordes redondeados para los botones */
+  color: #fff; /* Texto blanco */
+  background-color: #007bff; /* Azul */
+  border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  size: 10px;
+  padding: 5px 10px;
 }
 
 .button:hover {
-  background-color: #3171e0;
-  transform: scale(1.05); /* Escala el botón un poco al pasar el cursor */
+  background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+  transform: scale(1.05);
 }
 
-.info p:last-of-type {
-  margin-top: 10px;
+/* Estilos específicos para botones cuadrados */
+.square-button {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #fff; /* Texto blanco */
+  background-color: transparent; /* Azul */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.info img {
-  width: 150px; /* Ajusta el tamaño del código QR */
-  height: auto;
-  border-radius: 10px; /* Bordes redondeados para la imagen del QR */
+.square-button:hover {
+  background-color: transparent; /* Azul más oscuro al pasar el mouse */
 }
 
-/* Estilo para la caja de búsqueda */
+/* Estilos de búsqueda */
 .search-wrapper {
   display: flex;
   justify-content: center;
@@ -168,7 +164,7 @@ ion-content {
   margin: 0 auto;
   border-radius: 25px;
   overflow: hidden;
-  background-color: #dbdfe2;
+  background-color: #b3c7e6; /* Fondo azul suave */
 }
 
 .search-wrapper.expanded {
@@ -221,4 +217,39 @@ ion-content {
 
 input:focus {
   outline: none;
+}
+
+/* Estilos para los contenedores de botones en los slides */
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Estilos para los slides */
+ion-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Estilos para las imágenes en popover */
+.popover-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Títulos para servicios populares */
+.servicios-populares {
+  text-align: center;
+  color: #ffffff; /* Azul oscuro */
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }

@@ -1,14 +1,14 @@
 <ion-header>
-    <ion-item lines="none">
+  <ion-item lines="none">
 
-      <ion-avatar slot="start">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png">
-      </ion-avatar>
-      <ion-label>
-        <p>Hello (User Name)!</p>
-      </ion-label>
+    <ion-avatar slot="start">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png">
+    </ion-avatar>
+    <ion-label>
+      <p>Hello (User Name)!</p>
+    </ion-label>
 
-    </ion-item>
+  </ion-item>
 
 </ion-header>
 
@@ -20,14 +20,8 @@
       </ion-button>
     </div>
     <div class="input-holder">
-      <ion-input style="color: black;"
-        type="text"
-        placeholder="Type to search"
-        [(ngModel)]="searchTerm"
-        class="search-input"
-        (input)="onSearchInput()"
-        (blur)="onInputBlur()"
-      ></ion-input>
+      <ion-input style="color: black;" type="text" placeholder="Type to search" [(ngModel)]="searchTerm"
+        class="search-input" (input)="onSearchInput()" (blur)="onInputBlur()"></ion-input>
     </div>
   </div>
   <div>
@@ -42,33 +36,31 @@
           </ion-card-content>
         </ion-card>
       </ion-slide>
+      <h2 class="servicios-populares">Servicios Populares</h2>
       <ion-slide>
-        <ion-card>
-          <ion-card-header>
-            <div class="files">
-              <img src="https://media.gq.com.mx/photos/604458fef0cc2a1d8969755c/master/pass/10%20autos%20que%20quieren%20ser%20el%20mejor%20de%202021%20-%20BMW%204-Series%202021%20(1).jpg">
-            </div>
-          </ion-card-header>
-          <ion-card-content class="ion-text-left">
-            <ion-card-title class="ion-margin-bottom" style="color: black;">Vehículo 1</ion-card-title>
-            <ion-card-subtitle>Toyota Corolla 2022 azul, con aire acondicionado y asientos de cuero, número de placa ABC-1234. Conducido por Laura García, 32 años, con 5 años de experiencia y calificación de 4.9/5, conocida por su profesionalismo y amabilidad.</ion-card-subtitle>
-          </ion-card-content>
-        </ion-card>
+        <div class="button-container">
+          <ion-button id="click-trigger-1" class="square-button">Vehículo 1</ion-button>
+          <ion-popover trigger="click-trigger-1" triggerAction="click">
+            <ng-template>
+              <ion-content class="ion-padding">
+                Toyota Corolla 2022 azul, con aire acondicionado y asientos de cuero, número de placa ABC-1234. Conducido por Laura García, 32 años, con 5 años de experiencia y calificación de 4.9/5, conocida por su profesionalismo y amabilidad.
+              </ion-content>
+              <img src="https://media.gq.com.mx/photos/604458fef0cc2a1d8969755c/master/pass/10%20autos%20que%20quieren%20ser%20el%20mejor%20de%202021%20-%20BMW%204-Series%202021%20(1).jpg" class="popover-image">
+            </ng-template>
+          </ion-popover>
+    
+          <ion-button id="click-trigger-2" class="square-button">Vehículo 2</ion-button>
+          <ion-popover trigger="click-trigger-2" triggerAction="click">
+            <ng-template>
+              <ion-content class="ion-padding">
+                Honda Civic 2021 rojo, con sistema de navegación y asientos cómodos, número de placa XYZ-5678. Conducido por Javier López, 40 años, con 7 años de experiencia y calificación de 4.8/5, reconocido por su puntualidad y cortesía.
+              </ion-content>
+              <img src="https://www.autoplusdigital.com.ar/wp-content/uploads/2023/04/autos-2.jpg" class="popover-image">
+            </ng-template>
+          </ion-popover>
+        </div>
       </ion-slide>
-      <ion-slide>
-        <ion-card>
-          <ion-card-header>
-            <div class="files">
-              <img src="https://www.autoplusdigital.com.ar/wp-content/uploads/2023/04/autos-2.jpg">
-            </div>
-          </ion-card-header>
-          <ion-card-content class="ion-text-left">
-            <ion-card-title class="ion-margin-bottom" style="color: black;">Vehículo 2</ion-card-title>
-            <ion-card-subtitle>Honda Civic 2021 rojo, con sistema de navegación y asientos cómodos, número de placa XYZ-5678. Conducido por Javier López, 40 años, con 7 años de experiencia y calificación de 4.8/5, reconocido por su puntualidad y cortesía.</ion-card-subtitle>
-          </ion-card-content>
-        </ion-card>
-      </ion-slide>
-  </ion-slides>
+    </ion-slides>
   </div>
   <div class="slides ion-margin-bottom">
 
