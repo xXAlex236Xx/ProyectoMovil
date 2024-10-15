@@ -1,0 +1,50 @@
+<ion-content [fullscreen]="true">
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <h1 style="color: black;">Crea una cuenta!</h1>
+      <p>Empieza tu carrera con nosotros</p>
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input formControlName="name" required></ion-input>
+  </ion-item>
+  <p></p>
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input formControlName="email" type="email" required></ion-input>
+  </ion-item>
+  <p></p>
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input formControlName="password" type="password" (ionInput)="checkPasswordStrength()" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-progress-bar [value]="passwordStrength" [color]="passwordStrengthColor"></ion-progress-bar>
+    <ion-label>{{ passwordStrengthText }}</ion-label>
+  </ion-item>
+
+  <ion-button expand="full" type="submit">Register</ion-button>
+</form>
+
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button class="custom-tab-button">
+          <a href="http://localhost:8100/login">
+            <ion-label>Login</ion-label>
+          </a>
+        </ion-tab-button>
+        <ion-tab-button class="custom-tab-button">
+          <a href="http://localhost:8100/inicio">
+            <ion-label>Inicio</ion-label>
+          </a>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
