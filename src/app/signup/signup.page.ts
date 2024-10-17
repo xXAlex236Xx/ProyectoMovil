@@ -59,4 +59,8 @@ export class RegisterPage {
       this.passwordStrengthColor = 'danger';
     }
   }
+
+  goToLogin() {
+    this.router.navigate(['/login']);
+  }
 }

@@ -94,15 +94,11 @@
   <ion-toolbar>
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="home">
-          <ion-icon name="home"></ion-icon>
-          <ion-label>Inicio</ion-label>
-        </ion-tab-button>
         <ion-tab-button tab="trips">
           <ion-icon name="car"></ion-icon>
           <ion-label>Mis Viajes</ion-label>
         </ion-tab-button>
-        <ion-tab-button tab="search">
+        <ion-tab-button (click)="goToBuscar()">
           <ion-icon name="search"></ion-icon>
           <ion-label>Buscar Transporte</ion-label>
         </ion-tab-button>

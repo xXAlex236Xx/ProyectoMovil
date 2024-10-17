@@ -18,6 +18,11 @@ export class InicioPage {
     this.router.navigate(['/login']);
   }
 
+  //Navegar a la pagina busqueda
+  goToBuscar() {
+    this.router.navigate(['/busqueda']);
+  }
+
   // Opciones para los slides
   slidesOptions = {
     slidesPerView: 1,
