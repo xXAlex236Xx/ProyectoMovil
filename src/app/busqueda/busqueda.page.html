@@ -1,17 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Busqueda</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Busqueda</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1 class="search-title">Busqueda</h1>
+  <div class="search-wrapper">
+    <div class="search-button-holder">
+      <ion-button (click)="searchToggle($event)" class="search-icon">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+    </div>
+    <div class="input-holder">
+      <ion-input style="color: black;" type="text" placeholder="Type to search" [(ngModel)]="searchTerm"
+        class="search-input" (input)="onSearchInput()" (blur)="onInputBlur()"></ion-input>
+    </div>
+  </div>
 </ion-content>
-
 <ion-footer>
   <ion-toolbar>
     <ion-tabs>
@@ -21,7 +23,7 @@
           <ion-label>Mis Viajes</ion-label>
         </ion-tab-button>
         <ion-tab-button (click)="goToHome()">
-          <ion-icon name="search"></ion-icon>
+          <ion-icon name="home"></ion-icon>
           <ion-label>Home</ion-label>
         </ion-tab-button>
         <ion-tab-button (click)="goToLogin()">

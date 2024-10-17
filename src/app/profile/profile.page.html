@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+  <h1 class="Profile-title">Profile</h1>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="trips">
+          <ion-icon name="car"></ion-icon>
+          <ion-label>Mis Viajes</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="goToHome()">
+          <ion-icon name="home"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="trips">
+          <ion-icon name="car"></ion-icon>
+          <ion-label>Mis Viajes</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
