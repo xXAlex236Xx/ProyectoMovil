@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'restablecer-contraseña',
     loadChildren: () => import('./restablecer-contra/restablecer-contra.module').then(m => m.RestablecerContraPageModule) // Carga el módulo de la página de restablecimiento de contraseña
+  },  {
+    path: 'busqueda',
+    loadChildren: () => import('./busqueda/busqueda.module').then( m => m.BusquedaPageModule)
   }
+
 ];
 
 @NgModule({
