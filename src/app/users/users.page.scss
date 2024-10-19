@@ -1,0 +1,42 @@
+.users-section {
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 16px;
+      color: gray;
+    }
+  
+    ion-list {
+      margin-top: 10px;
+  
+      ion-item {
+        --background: #f9f9f9;
+        margin: 5px 0;
+        border-radius: 8px;
+  
+        ion-label {
+          h2 {
+            font-size: 20px;
+            color: #333;
+          }
+  
+          p {
+            font-size: 14px;
+            color: #666;
+            margin: 2px 0;
+          }
+        }
+      }
+    }
+  
+    /* Mensaje si no hay usuarios */
+    p {
+      text-align: center;
+      font-size: 18px;
+      color: #999;
+    }
+  }

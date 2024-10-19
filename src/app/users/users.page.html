@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+  <div class="users-section ion-padding">
+    <div class="heading ion-padding">
+      <h1 style="color: black;">Usuarios Registrados</h1>
+      <p>Lista de usuarios creados:</p>
+    </div>
+
+    <ion-list *ngIf="users.length > 0; else noUsers">
+      <ion-item *ngFor="let user of users">
+        <ion-label>
+          <h2>{{ user.name }}</h2>
+          <p>Email: {{ user.email }}</p>
+          <p>Contraseña: {{ user.password }}</p>
+        </ion-label>
+        <ion-button color="danger" (click)="deleteUser(user.email)">
+          Eliminar
+        </ion-button>
+      </ion-item>
+    </ion-list>
+
+    <ng-template #noUsers>
+      <p>No hay usuarios registrados.</p>
+    </ng-template>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="goToLogin()">
+          <ion-label>Login</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Storage } from '@ionic/storage-angular';
 
 @Component({
   selector: 'app-register',
@@ -9,24 +10,41 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterPage {
   registerForm: FormGroup;
-  passwordStrength: number = 0; // barra progreso
+  passwordStrength: number = 0; // Barra de progreso
   passwordStrengthText: string = '';
-  passwordStrengthColor: string = 'danger'; // su color
+  passwordStrengthColor: string = 'danger'; // Color de la barra
 
-  constructor(private router: Router, private fb: FormBuilder) {
+  constructor(private router: Router, private fb: FormBuilder, private storage: Storage) {
+    // Inicializa el formulario
     this.registerForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]]
     });
+
+    this.initStorage(); // Inicializar el almacenamiento
   }
 
-  register() {
+  async initStorage() {
+    // Inicializa el almacenamiento de Ionic
+    await this.storage.create();
+  }
+
+  async register() {
     if (this.registerForm.valid) {
-      console.log('Registration successful');
-      this.router.navigate(['/home']); //navega a home
+      const userData = {
+        name: this.registerForm.get('name')?.value,
+        email: this.registerForm.get('email')?.value,
+        password: this.registerForm.get('password')?.value
+      };
+
+      // Guarda los datos del usuario en el almacenamiento usando el email como clave
+      await this.storage.set(userData.email, userData);
+
+      console.log('Registro exitoso');
+      this.router.navigate(['/login']); // Cambia a la página de login
     } else {
-      console.log('Form is invalid');
+      console.log('Formulario no válido');
     }
   }
 
@@ -34,12 +52,12 @@ export class RegisterPage {
     const password = this.registerForm.get('password')?.value;
     let strength = 0;
 
-    // revisa su longitud
+    // Revisa la longitud de la contraseña
     if (password.length >= 8) {
       strength++;
     }
 
-    // revisa si tiene un caracter especial
+    // Revisa si tiene un caracter especial
     if (/[A-Za-z]/.test(password) && /[0-9]/.test(password) || /[\W_]/.test(password)) {
       strength++;
     }

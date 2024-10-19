@@ -1,13 +1,62 @@
-.Profile-title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.1);
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.profile-container {
+  text-align: center;
+  padding: 20px;
+
+  ion-avatar {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    img {
+      border-radius: 50%;
+    }
   }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .menu-options {
+    margin-top: 30px;
+    ion-item {
+      --background: #f4f4f4;
+      --border-color: #ddd;
+      --border-radius: 8px;
+      margin-bottom: 10px;
+      padding: 10px 20px;
+
+      ion-icon {
+        color: #6c757d;
+      }
+
+      ion-label {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+ion-footer {
+  ion-toolbar {
+    ion-tabs {
+      ion-tab-bar {
+        ion-tab-button {
+          ion-icon {
+            font-size: 24px;
+          }
+
+          ion-label {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
