@@ -1,0 +1,290 @@
+[
+  {
+    "make": "Toyota",
+    "model": "Corolla",
+    "driver": "Juan Perez",
+    "rating": 4.5
+  },
+  {
+    "make": "Toyota",
+    "model": "Camry",
+    "driver": "Laura Martinez",
+    "rating": 4.6
+  },
+  {
+    "make": "Honda",
+    "model": "Civic",
+    "driver": "Maria Lopez",
+    "rating": 4.7
+  },
+  {
+    "make": "Honda",
+    "model": "Accord",
+    "driver": "Carlos Gomez",
+    "rating": 4.8
+  },
+  {
+    "make": "Ford",
+    "model": "Fiesta",
+    "driver": "Ricardo Morales",
+    "rating": 4.2
+  },
+  {
+    "make": "Ford",
+    "model": "Focus",
+    "driver": "Ana Torres",
+    "rating": 4.3
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Malibu",
+    "driver": "Elena Velez",
+    "rating": 4.6
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Impala",
+    "driver": "Luis Ramirez",
+    "rating": 4.4
+  },
+  {
+    "make": "Nissan",
+    "model": "Altima",
+    "driver": "Gabriel Torres",
+    "rating": 4.3
+  },
+  {
+    "make": "Nissan",
+    "model": "Sentra",
+    "driver": "Victoria Castillo",
+    "rating": 4.5
+  },
+  {
+    "make": "Hyundai",
+    "model": "Elantra",
+    "driver": "Pedro Sanchez",
+    "rating": 4.4
+  },
+  {
+    "make": "Hyundai",
+    "model": "Sonata",
+    "driver": "Natalia Ruiz",
+    "rating": 4.5
+  },
+  {
+    "make": "Kia",
+    "model": "Forte",
+    "driver": "Isabella Rojas",
+    "rating": 4.1
+  },
+  {
+    "make": "Kia",
+    "model": "Optima",
+    "driver": "Claudia Torres",
+    "rating": 4.3
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Jetta",
+    "driver": "Sofia Ruiz",
+    "rating": 4.8
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Passat",
+    "driver": "Javier Soto",
+    "rating": 4.6
+  },
+  {
+    "make": "Subaru",
+    "model": "Impreza",
+    "driver": "Esteban Morales",
+    "rating": 4.5
+  },
+  {
+    "make": "Subaru",
+    "model": "Outback",
+    "driver": "Daniela Castro",
+    "rating": 4.7
+  },
+  {
+    "make": "Mazda",
+    "model": "3",
+    "driver": "Juan Carlos",
+    "rating": 4.6
+  },
+  {
+    "make": "Mazda",
+    "model": "CX-5",
+    "driver": "Angela Torres",
+    "rating": 4.5
+  },
+  {
+    "make": "Dodge",
+    "model": "Charger",
+    "driver": "Fernando Paredes",
+    "rating": 4.2
+  },
+  {
+    "make": "Dodge",
+    "model": "Durango",
+    "driver": "Sergio Lopez",
+    "rating": 4.4
+  },
+  {
+    "make": "Chrysler",
+    "model": "300",
+    "driver": "Ana Martinez",
+    "rating": 4.3
+  },
+  {
+    "make": "GMC",
+    "model": "Terrain",
+    "driver": "Luis Enrique",
+    "rating": 4.4
+  },
+  {
+    "make": "Jeep",
+    "model": "Cherokee",
+    "driver": "Clara Garcia",
+    "rating": 4.1
+  },
+  {
+    "make": "Jeep",
+    "model": "Wrangler",
+    "driver": "Marta Jimenez",
+    "rating": 4.5
+  },
+  {
+    "make": "BMW",
+    "model": "3 Series",
+    "driver": "Sofia Castillo",
+    "rating": 4.8
+  },
+  {
+    "make": "BMW",
+    "model": "X5",
+    "driver": "Andres Salazar",
+    "rating": 4.9
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "driver": "Ricardo Torres",
+    "rating": 4.9
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "E-Class",
+    "driver": "Jessica Mendez",
+    "rating": 4.8
+  },
+  {
+    "make": "Audi",
+    "model": "A4",
+    "driver": "Esteban Rojas",
+    "rating": 4.7
+  },
+  {
+    "make": "Audi",
+    "model": "Q5",
+    "driver": "Lucia Velez",
+    "rating": 4.6
+  },
+  {
+    "make": "Lexus",
+    "model": "ES",
+    "driver": "Miguel Torres",
+    "rating": 4.6
+  },
+  {
+    "make": "Lexus",
+    "model": "RX",
+    "driver": "Maria Gonzalez",
+    "rating": 4.5
+  },
+  {
+    "make": "Porsche",
+    "model": "Macan",
+    "driver": "Adrian Salazar",
+    "rating": 4.9
+  },
+  {
+    "make": "Porsche",
+    "model": "Cayenne",
+    "driver": "Fernando Torres",
+    "rating": 4.8
+  },
+  {
+    "make": "Tesla",
+    "model": "Model 3",
+    "driver": "Ana Garcia",
+    "rating": 4.8
+  },
+  {
+    "make": "Tesla",
+    "model": "Model S",
+    "driver": "Jorge Alvarez",
+    "rating": 4.9
+  },
+  {
+    "make": "Toyota",
+    "model": "Highlander",
+    "driver": "Raul Sanchez",
+    "rating": 4.4
+  },
+  {
+    "make": "Ford",
+    "model": "Ranger",
+    "driver": "Victor Morales",
+    "rating": 4.2
+  },
+  {
+    "make": "Chevrolet",
+    "model": "Equinox",
+    "driver": "Carla Torres",
+    "rating": 4.5
+  },
+  {
+    "make": "Nissan",
+    "model": "Rogue",
+    "driver": "Sandra Gomez",
+    "rating": 4.3
+  },
+  {
+    "make": "Hyundai",
+    "model": "Tucson",
+    "driver": "Fernando Ruiz",
+    "rating": 4.4
+  },
+  {
+    "make": "Kia",
+    "model": "Sportage",
+    "driver": "Claudia Ramirez",
+    "rating": 4.5
+  },
+  {
+    "make": "Subaru",
+    "model": "Forester",
+    "driver": "Cristina Velez",
+    "rating": 4.6
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "driver": "Emilio Soto",
+    "rating": 4.5
+  },
+  {
+    "make": "Mazda",
+    "model": "CX-30",
+    "driver": "Rosa Martinez",
+    "rating": 4.6
+  },
+  {
+    "make": "Dodge",
+    "model": "Ram",
+    "driver": "Hugo Sanchez",
+    "rating": 4.4
+  }
+]

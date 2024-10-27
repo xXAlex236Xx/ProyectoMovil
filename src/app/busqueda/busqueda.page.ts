@@ -1,38 +1,54 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-busqueda',
   templateUrl: './busqueda.page.html',
   styleUrls: ['./busqueda.page.scss'],
 })
-export class BusquedaPage {
-  constructor(private router: Router) {}
-  searchTerm: string = ''; // Propiedad para enlazar con el input de búsqueda
+export class BusquedaPage implements OnInit {
+  constructor(private router: Router, private http: HttpClient) {}
+
+  searchTerm: string = ''; //para enlazar con el input de búsqueda
   isExpanded: boolean = false; // Propiedad para controlar si la caja de búsqueda está expandida
   typingTimeout: any; // Variable para almacenar el timeout
-  
+  vehicles: any[] = []; // Para almacenar los vehículos
+  filteredVehicles: any[] = []; // Para almacenar los vehículos filtrados
+
+  ngOnInit() {
+    this.loadVehicles(); // Cargar los vehículos al inicializar el componente
+  }
+
   // Navegar a la página de login
   goToLogin() {
     this.router.navigate(['/login']);
   }
 
-  //Navegar a la pagina inicio
+  // Navegar a la pagina inicio
   goToHome() {
     this.router.navigate(['/inicio']);
   }
+
+  // Método para cargar vehículos desde el archivo JSON
+  loadVehicles() {
+    this.http.get<any[]>('assets/vehicles.json').subscribe(data => {
+      this.vehicles = data; // Almacenar los vehículos cargados
+      this.filteredVehicles = this.vehicles; // Inicializar la lista filtrada
+    });
+  }
+
   // Método para alternar la expansión del cuadro de búsqueda
   searchToggle(evt: Event) {
     this.isExpanded = !this.isExpanded; // Alternar el estado
-    const container = (evt.currentTarget as HTMLElement).closest(
-      '.search-wrapper'
-    );
+    const container = (evt.currentTarget as HTMLElement).closest('.search-wrapper');
     if (container) {
       if (this.isExpanded) {
         container.classList.add('expanded');
       } else {
         container.classList.remove('expanded');
         this.searchTerm = ''; // Limpiar el campo de búsqueda cuando se cierre
+        this.filteredVehicles = this.vehicles; // Reiniciar la lista filtrada
       }
     }
   }
@@ -40,6 +56,12 @@ export class BusquedaPage {
   // Método que se ejecuta cuando el usuario escribe en el cuadro de búsqueda
   onSearchInput() {
     clearTimeout(this.typingTimeout); // Limpiar cualquier timeout previo
+
+    // Filtrar vehículos basado en el término de búsqueda
+    this.filteredVehicles = this.vehicles.filter(vehicle =>
+      vehicle.make.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      vehicle.model.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
 
     // Configurar un nuevo timeout de 3 segundos para cerrar el cuadro de búsqueda
     this.typingTimeout = setTimeout(() => {
@@ -60,6 +82,7 @@ export class BusquedaPage {
       container.classList.remove('expanded');
     }
     this.searchTerm = ''; // Limpiar el campo de búsqueda
+    this.filteredVehicles = this.vehicles; // Reiniciar la lista filtrada
   }
 
   // Detectar clics fuera del contenedor de búsqueda

@@ -1,19 +1,28 @@
-
-
 <ion-content [fullscreen]="true">
-  <h1 class="search-title">Busqueda</h1>
-  <div class="search-wrapper">
+  <h1 class="search-title">Mejores Servicios</h1>
+  <div class="search-wrapper" [ngClass]="{ expanded: isExpanded }">
     <div class="search-button-holder">
       <ion-button (click)="searchToggle($event)" class="search-icon">
         <ion-icon name="search-outline"></ion-icon>
       </ion-button>
     </div>
     <div class="input-holder">
-      <ion-input style="color: black;" type="text" placeholder="Type to search" [(ngModel)]="searchTerm"
+      <ion-input style="color: black;" type="text" placeholder="Nombre Vehiculo" [(ngModel)]="searchTerm"
         class="search-input" (input)="onSearchInput()" (blur)="onInputBlur()"></ion-input>
     </div>
   </div>
+
+  <ion-list>
+    <ion-item *ngFor="let vehicle of filteredVehicles">
+      <div class="vehicle-details">
+        <span class="rating">{{ vehicle.make }} {{ vehicle.model }}</span>
+        <span class="driver">Driver: {{ vehicle.driver }}</span>
+        <span class="rating">Rating: {{ vehicle.rating }}</span>
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
 <ion-footer>
   <ion-toolbar>
     <ion-tabs>
