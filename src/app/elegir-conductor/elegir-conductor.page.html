@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Elegir Conductor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="vehicle-info">
+    <h2>Vehículo Elegido</h2>
+    <p><strong>Marca:</strong> {{ selectedVehicle.make }}</p>
+    <p><strong>Modelo:</strong> {{ selectedVehicle.model }}</p>
+    <p><strong>Rating:</strong> {{ selectedVehicle.rating }}</p>
+  </div>
+
+  <h1 class="drivers-title">Lista de Conductores</h1>
+  <ion-list>
+    <ion-item *ngFor="let driver of drivers">
+      <ion-label>
+        <h2>{{ driver.name.first }} {{ driver.name.last }}</h2>
+        <p>Correo: {{ driver.email }}</p>
+        <p>Teléfono: {{ driver.phone }}</p>
+      </ion-label>
+      <ion-button (click)="chooseDriver(driver)">Elegir</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

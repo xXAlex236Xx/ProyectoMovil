@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { VehicleService } from '../services/vehicle.service';
 
 @Component({
   selector: 'app-busqueda',
@@ -8,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./busqueda.page.scss'],
 })
 export class BusquedaPage implements OnInit {
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(private router: Router, private http: HttpClient, private vehicleService: VehicleService) {}
 
   searchTerm: string = ''; //para enlazar con el input de búsqueda
   isExpanded: boolean = false; // Propiedad para controlar si la caja de búsqueda está expandida
@@ -32,7 +33,7 @@ export class BusquedaPage implements OnInit {
 
   // Método para cargar vehículos desde el archivo JSON
   loadVehicles() {
-    this.http.get<any[]>('assets/vehicles.json').subscribe(data => {
+    this.http.get<any[]>('assets/vehicles.json').subscribe((data) => {
       this.vehicles = data; // Almacenar los vehículos cargados
       this.filteredVehicles = this.vehicles; // Inicializar la lista filtrada
     });
@@ -41,7 +42,9 @@ export class BusquedaPage implements OnInit {
   // Método para alternar la expansión del cuadro de búsqueda
   searchToggle(evt: Event) {
     this.isExpanded = !this.isExpanded; // Alternar el estado
-    const container = (evt.currentTarget as HTMLElement).closest('.search-wrapper');
+    const container = (evt.currentTarget as HTMLElement).closest(
+      '.search-wrapper'
+    );
     if (container) {
       if (this.isExpanded) {
         container.classList.add('expanded');
@@ -58,15 +61,16 @@ export class BusquedaPage implements OnInit {
     clearTimeout(this.typingTimeout); // Limpiar cualquier timeout previo
 
     // Filtrar vehículos basado en el término de búsqueda
-    this.filteredVehicles = this.vehicles.filter(vehicle =>
-      vehicle.make.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-      vehicle.model.toLowerCase().includes(this.searchTerm.toLowerCase())
+    this.filteredVehicles = this.vehicles.filter(
+      (vehicle) =>
+        vehicle.make.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        vehicle.model.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
 
     // Configurar un nuevo timeout de 3 segundos para cerrar el cuadro de búsqueda
     this.typingTimeout = setTimeout(() => {
       this.closeSearch();
-    }, 3000); // 3 segundos de inactividad antes de cerrar
+    }, 90000);
   }
 
   // Método que se ejecuta cuando el campo de búsqueda pierde el foco
@@ -93,5 +97,11 @@ export class BusquedaPage implements OnInit {
     if (container && !container.contains(target)) {
       this.closeSearch();
     }
+  }
+
+  // Método que se ejecuta cuando el usuario elige un vehículo
+  chooseDriver(vehicle: any) {
+    this.vehicleService.setSelectedVehicle(vehicle); // Almacenar el vehículo en el servicio
+    this.router.navigate(['/elegir-conductor'], { state: { selectedVehicle: vehicle } });
   }
 }

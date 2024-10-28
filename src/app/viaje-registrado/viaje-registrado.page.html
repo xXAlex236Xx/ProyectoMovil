@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Viaje Registrado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="trip-info">
+    <h2>Información del Viaje</h2>
+    
+    <div class="vehicle-info">
+      <h3>Vehículo Elegido</h3>
+      <p><strong>Marca:</strong> {{ selectedVehicle?.make }}</p>
+      <p><strong>Modelo:</strong> {{ selectedVehicle?.model }}</p>
+      <p><strong>Rating:</strong> {{ selectedVehicle?.rating }}</p>
+    </div>
+
+    <div class="driver-info">
+      <h3>Conductor Elegido</h3>
+      <p><strong>Nombre:</strong> {{ selectedDriver?.name.first }} {{ selectedDriver?.name.last }}</p>
+      <p><strong>Correo:</strong> {{ selectedDriver?.email }}</p>
+      <p><strong>Teléfono:</strong> {{ selectedDriver?.phone }}</p>
+    </div>
+
+    <ion-button expand="block" color="primary" (click)="goToHome()">Volver a Inicio</ion-button>
+  </div>
+</ion-content>

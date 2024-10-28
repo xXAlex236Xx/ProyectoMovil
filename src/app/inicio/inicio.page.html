@@ -1,12 +1,19 @@
 <ion-header>
-  <ion-item lines="none">
-    <ion-avatar slot="start">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png">
-    </ion-avatar>
-    <ion-label>
-      <p>Hello {{ userName }}!</p>
-    </ion-label>
-  </ion-item>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToCamera()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png">
+      </ion-avatar>
+      <ion-label>
+        <p>Hello {{ userName }}!</p>
+      </ion-label>
+    </ion-item>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
@@ -15,44 +22,41 @@
       <ion-slide>
         <ion-card>
           <ion-card-header>
+            <ion-card-title class="ion-text-center" style="color: black; font-weight: bold;">Bienvenido a
+              TeLlevoAPP</ion-card-title>
+            <ion-card-subtitle class="ion-text-center" style="font-size: 1.1em;">Facilitando tu transporte de regreso a
+              casa</ion-card-subtitle>
           </ion-card-header>
           <ion-card-content class="ion-text-left">
-            <ion-card-title class="ion-margin-bottom" style="color: black;">Bienvenido a TeLlevoAPP</ion-card-title>
-            <ion-card-subtitle>La aplicación diseñada para facilitar el transporte de retorno a casa para los estudiantes de DuocUC.</ion-card-subtitle>
+            <p style="line-height: 1.5;">
+              TeLlevoAPP es la solución perfecta para aquellos estudiantes que buscan un transporte seguro y eficiente
+              después de sus clases. Con nuestra plataforma, podrás conectarte fácilmente con otros estudiantes que
+              tengan el mismo destino, optimizando así tu tiempo de viaje y fomentando un ambiente de comunidad y
+              compañerismo.
+            </p>
+            <br>
+            <p style="line-height: 1.5;">
+              Nuestra aplicación te brinda acceso a diferentes opciones de transporte, desde automóviles compartidos
+              hasta servicios de transporte privado, todo a través de una interfaz intuitiva y fácil de usar. Elige el
+              servicio que mejor se adapte a tus necesidades y presupuesto, asegurando una experiencia de viaje cómoda y
+              sin complicaciones.
+            </p>
+            <br>
+            <p style="line-height: 1.5;">
+              Con TeLlevoAPP, podrás programar tus viajes con anticipación y recibir notificaciones en tiempo real sobre
+              el estado de tu transporte, permitiéndote planificar tus actividades diarias sin preocupaciones. ¡Únete a
+              nuestra comunidad y descubre una nueva forma de desplazarte por la ciudad con seguridad y confianza!
+            </p>
           </ion-card-content>
         </ion-card>
       </ion-slide>
-      <h2 class="servicios-populares">Servicios Populares</h2>
-      <ion-slide>
-        <div class="button-container">
-          <ion-button id="click-trigger-1" class="square-button">Vehículo 1</ion-button>
-          <ion-popover trigger="click-trigger-1" triggerAction="click">
-            <ng-template>
-              <ion-content class="ion-padding">
-                Toyota Corolla 2022 azul, con aire acondicionado y asientos de cuero, número de placa ABC-1234. Conducido por Laura García, 32 años, con 5 años de experiencia y calificación de 4.9/5, conocida por su profesionalismo y amabilidad.
-              </ion-content>
-              <img src="https://media.gq.com.mx/photos/604458fef0cc2a1d8969755c/master/pass/10%20autos%20que%20quieren%20ser%20el%20mejor%20de%202021%20-%20BMW%204-Series%202021%20(1).jpg" class="popover-image">
-            </ng-template>
-          </ion-popover>
-    
-          <ion-button id="click-trigger-2" class="square-button">Vehículo 2</ion-button>
-          <ion-popover trigger="click-trigger-2" triggerAction="click">
-            <ng-template>
-              <ion-content class="ion-padding">
-                Honda Civic 2021 rojo, con sistema de navegación y asientos cómodos, número de placa XYZ-5678. Conducido por Javier López, 40 años, con 7 años de experiencia y calificación de 4.8/5, reconocido por su puntualidad y cortesía.
-              </ion-content>
-              <img src="https://www.autoplusdigital.com.ar/wp-content/uploads/2023/04/autos-2.jpg" class="popover-image">
-            </ng-template>
-          </ion-popover>
-        </div>
-      </ion-slide>
     </ion-slides>
   </div>
-  <div class="slides ion-margin-bottom">
 
+  <div class="slides ion-margin-bottom">
     <div class="info">
       <h2>Contacto para Asistencia y Soporte</h2>
-      <p>institución: DuocUC, Vicerrectoría Académica, ET3</p>
+      <p>Institución: DuocUC, Vicerrectoría Académica, ET3</p>
       <p>Correo Electrónico de Soporte:¿</p>
       <p>Teléfono de Contacto: +56 2 1234 5678</p>
       <p>Horario de Atención: Lunes a Viernes, 9:00 AM - 6:00 PM</p>

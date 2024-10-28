@@ -16,8 +16,8 @@
     <ion-item *ngFor="let vehicle of filteredVehicles">
       <div class="vehicle-details">
         <span class="rating">{{ vehicle.make }} {{ vehicle.model }}</span>
-        <span class="driver">Driver: {{ vehicle.driver }}</span>
         <span class="rating">Rating: {{ vehicle.rating }}</span>
+        <ion-button (click)="chooseDriver(vehicle)" fill="outline" class="choose-button">Elegir</ion-button>
       </div>
     </ion-item>
   </ion-list>

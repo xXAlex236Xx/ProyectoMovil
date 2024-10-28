@@ -33,6 +33,22 @@ const routes: Routes = [
   {
     path: 'users',
     loadChildren: () => import('./users/users.module').then( m => m.UsersPageModule)
+  },
+  {
+    path: 'camera',
+    loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
+  },
+  {
+    path: 'elegir-conductor',
+    loadChildren: () => import('./elegir-conductor/elegir-conductor.module').then( m => m.ElegirConductorPageModule)
+  },
+  {
+    path: 'viaje-registrado',
+    loadChildren: () => import('./viaje-registrado/viaje-registrado.module').then( m => m.ViajeRegistradoPageModule)
+  },
+  {
+    path: 'mis-viajes',
+    loadChildren: () => import('./mis-viajes/mis-viajes.module').then( m => m.MisViajesPageModule)
   }
 
 

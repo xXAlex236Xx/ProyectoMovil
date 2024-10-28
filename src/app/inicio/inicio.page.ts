@@ -36,6 +36,10 @@ export class InicioPage implements OnInit {
     this.router.navigate(['/profile']);
   }
 
+  goToCamera() {
+    this.router.navigate(['/camera']);
+  }
+
   // Navegar a la página de búsqueda
   goToBuscar() {
     this.router.navigate(['/busqueda']);

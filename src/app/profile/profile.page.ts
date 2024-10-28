@@ -43,4 +43,8 @@ export class ProfilePage implements OnInit {
     await this.storage.remove('currentUser'); // Elimina al usuario actual del almacenamiento
     this.router.navigate(['/login']); // Redirige a la página de login
   }
+
+  goToViajes() {
+    this.router.navigate(['/mis-viajes']);
+  }
 }

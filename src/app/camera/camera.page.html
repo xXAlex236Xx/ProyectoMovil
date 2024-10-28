@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cámara</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="full" (click)="takePhoto()">Tomar Foto</ion-button>
+  <ion-button expand="full" (click)="selectPhoto()">Seleccionar de la Galería</ion-button>
+
+  <div *ngIf="image">
+    <h2>Imagen Capturada:</h2>
+    <img [src]="image" *ngIf="image" style="width: 100%; border-radius: 8px;">
+  </div>
+</ion-content>
