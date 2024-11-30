@@ -10,18 +10,17 @@
         <ion-item>
           <ion-label position="floating">EMAIL</ion-label>
           <ion-input
+            [(ngModel)]="email"
             type="email"
             labelPlacement="floating"
             helperText="Introduce un correo electrónico válido"
             errorText="Correo electrónico inválido"
-            ngModel
-            email
           ></ion-input>
         </ion-item>
       </div>
     </div>
     <div class="action-buttons ion-padding">
-      <ion-button id="enviar-instrucciones" size="large" class="login-button">Enviar Instrucciones</ion-button>
+      <ion-button (click)="sendInstructions()" id="enviar-instrucciones" size="large" class="login-button">Enviar Instrucciones</ion-button>
       <ion-loading class="custom-loading" trigger="enviar-instrucciones" message="Enviando..." [duration]="3000" spinner="circles"></ion-loading>
       <ion-router-link routerLink="/login">
         <p style="color: rgb(47, 0, 255);">Volver al inicio de sesión</p>
