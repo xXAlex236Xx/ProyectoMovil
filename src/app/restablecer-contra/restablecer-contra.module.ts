@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { RestablecerContraPageRoutingModule } from './restablecer-contra-routing.module';
 
-import { RestablecerContraPage } from './restablecer-contra.page';
+import { RestablecerContraPage} from './restablecer-contra.page';
 
 @NgModule({
   imports: [
