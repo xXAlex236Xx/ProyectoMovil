@@ -40,9 +40,10 @@ export class ProfilePage implements OnInit {
 
   // Cerrar sesión y navegar a la página de login
   async logOut() {
-    await this.storage.remove('currentUser'); // Elimina al usuario actual del almacenamiento
+    await this.storage.remove('currentUser'); // Limpia el usuario actual
     this.router.navigate(['/login']); // Redirige a la página de login
   }
+  
 
   goToViajes() {
     this.router.navigate(['/mis-viajes']);
