@@ -18,3 +18,5 @@ import { BusquedaPage } from './busqueda.page';
   declarations: [BusquedaPage] 
 })
 export class BusquedaPageModule {} 
+
+
