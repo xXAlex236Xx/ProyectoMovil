@@ -4,29 +4,30 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login', // Redirige la ruta raíz a la página de inicio
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule) // Carga el módulo de la página de inicio de sesión
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
   {
     path: 'signup',
-    loadChildren: () => import('./signup/signup.module').then(m => m.SignupPageModule) // Carga el módulo de la página de registro
+    loadChildren: () => import('./signup/signup.module').then(m => m.SignupPageModule)
   },
   {
     path: 'inicio',
-    loadChildren: () => import('./inicio/inicio.module').then(m => m.InicioPageModule) // Carga el módulo de la página de inicio
+    loadChildren: () => import('./inicio/inicio.module').then(m => m.InicioPageModule)
   },
   {
     path: 'restablecer-contraseña',
-    loadChildren: () => import('./restablecer-contra/restablecer-contra.module').then(m => m.RestablecerContraPageModule) // Carga el módulo de la página de restablecimiento de contraseña
+    loadChildren: () => import('./restablecer-contra/restablecer-contra.module').then(m => m.RestablecerContraPageModule)
   },
   {
     path: 'busqueda',
     loadChildren: () => import('./busqueda/busqueda.module').then( m => m.BusquedaPageModule)
-  },  {
+  },
+  {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
@@ -49,10 +50,19 @@ const routes: Routes = [
   {
     path: 'mis-viajes',
     loadChildren: () => import('./mis-viajes/mis-viajes.module').then( m => m.MisViajesPageModule)
+  },
+  {
+    path: 'not-found',
+    loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
+  },
+  // Ruta comodín para manejar páginas no definidas (error 404)
+  {
+    path: '**',
+    redirectTo: '/not-found', // Redirige a la página 404 en caso de rutas no válidas
+    pathMatch: 'full'
   }
-
-
 ];
+
 
 @NgModule({
   imports: [

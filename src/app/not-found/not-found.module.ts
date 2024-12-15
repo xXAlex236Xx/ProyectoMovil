@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
- 
+
 import { IonicModule } from '@ionic/angular';
- 
-import { BusquedaPageRoutingModule } from './busqueda-routing.module';
- 
-import { BusquedaPage } from './busqueda.page';
- 
-@NgModule({ 
+
+import { NotFoundPageRoutingModule } from './not-found-routing.module';
+
+import { NotFoundPage } from './not-found.page';
+
+@NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    BusquedaPageRoutingModule
+    NotFoundPageRoutingModule
   ],
-  declarations: [BusquedaPage] 
+  declarations: [NotFoundPage]
 })
-export class BusquedaPageModule {} 
-
-
+export class NotFoundPageModule {}

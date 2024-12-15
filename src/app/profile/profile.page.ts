@@ -104,4 +104,8 @@ export class ProfilePage implements OnInit {
   goToViajes() {
     this.router.navigate(['/mis-viajes']);
   }
+
+  goToError() {
+    this.router.navigate(['/ihd406t84rf646d4e4s4bv']);
+  }
 }
