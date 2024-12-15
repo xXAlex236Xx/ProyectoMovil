@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
   <div class="profile-container">
-    <ion-avatar>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png">
+    <ion-avatar (click)="presentActionSheet()">
+      <img [src]="profilePicture">
     </ion-avatar>
 
     <h2>{{ userName }}</h2>
@@ -14,7 +14,7 @@
           <ion-label>Configuración</ion-label>
         </ion-item>
         <ion-item (click)="goToViajes()">
-          <ion-icon slot="start" name="log-out-outline"></ion-icon>
+          <ion-icon slot="start" name="car-outline"></ion-icon>
           <ion-label>Mis Viajes</ion-label>
         </ion-item>
         <ion-item>

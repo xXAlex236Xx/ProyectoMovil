@@ -7,7 +7,7 @@
     </ion-buttons>
     <ion-item lines="none">
       <ion-avatar slot="start">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png">
+        <img [src]="userProfilePicture" alt="User Profile Picture">
       </ion-avatar>
       <ion-label>
         <p>Hello {{ userName }}!</p>

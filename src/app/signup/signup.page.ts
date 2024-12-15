@@ -19,7 +19,8 @@ export class RegisterPage {
     this.registerForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(8)]]
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      profilePicture: [''] // Espacio reservado para agregar la foto más adelante
     });
 
     this.initStorage(); // Inicializar el almacenamiento
@@ -35,7 +36,8 @@ export class RegisterPage {
       const userData = {
         name: this.registerForm.get('name')?.value,
         email: this.registerForm.get('email')?.value,
-        password: this.registerForm.get('password')?.value
+        password: this.registerForm.get('password')?.value,
+        profilePicture: this.registerForm.get('profilePicture')?.value // Espacio para guardar la foto de perfil
       };
 
       // Guarda los datos del usuario en el almacenamiento usando el email como clave
